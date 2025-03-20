@@ -1,5 +1,11 @@
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using SistemaMatriculas.Application.Mappers;
+using SistemaMatriculas.Application.Services;
+using SistemaMatriculas.Application.Validators;
+using SistemaMatriculas.Domain.Cursos;
 using SistemaMatriculas.Infraestructure;
+using SistemaMatriculas.Infraestructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +15,17 @@ builder.Services.AddDbContext<ApplicationDbContext>( options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"));
 });
 
+/* Dependency inyection (services)*/
+builder.Services.AddKeyedScoped<IService<CursoDto>, CursoService>("cursoService");
+
+/* Repository */
+builder.Services.AddScoped<IRepository<Curso>, CursoRepository>();
+
+/* Mapper */
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+/* Validator */
+builder.Services.AddScoped<IValidator<CursoDto>, CursoValidation>();
 
 // Add services to the container.
 

@@ -15,7 +15,7 @@ namespace SistemaMatriculas.Infraestructure.Repository
         public async Task<IEnumerable<Curso>> Get()
             => await _context.Cursos.ToListAsync();
 
-        public async Task<Curso?> GetById(int id)
+        public async Task<Curso> GetById(int id)
             => await _context.Cursos.FindAsync(id)!;
 
         public void Delete(Curso entity)

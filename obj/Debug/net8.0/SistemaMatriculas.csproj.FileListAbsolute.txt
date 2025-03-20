@@ -166,3 +166,6 @@ D:\coding\.NET\SistemaMatriculas\obj\Debug\net8.0\refint\SistemaMatriculas.dll
 D:\coding\.NET\SistemaMatriculas\obj\Debug\net8.0\SistemaMatriculas.pdb
 D:\coding\.NET\SistemaMatriculas\obj\Debug\net8.0\SistemaMatriculas.genruntimeconfig.cache
 D:\coding\.NET\SistemaMatriculas\obj\Debug\net8.0\ref\SistemaMatriculas.dll
+D:\coding\.NET\SistemaMatriculas\bin\Debug\net8.0\AutoMapper.dll
+D:\coding\.NET\SistemaMatriculas\obj\Debug\net8.0\SistemaMatriculas.sourcelink.json
+D:\coding\.NET\SistemaMatriculas\bin\Debug\net8.0\FluentValidation.dll
